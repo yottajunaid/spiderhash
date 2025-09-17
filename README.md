@@ -1,6 +1,4 @@
 # THE REPOSITORY IS UNDER MAINTAINANCE!!! DON'T USE IT NOW!!!
-# spiderhash
-A GUI Based Hash Cracker
 
 # SpiderHash
 
@@ -11,9 +9,9 @@ A GUI Based Hash Cracker
 ## Table of Contents
 
 1. [Features](#features)  
-2. [Supported Hash Algorithms](#supported-hash-algorithms)  
-3. [How It Works (Architecture & Internals)](#how-it-works-architecture--internals)  
-4. [Installation](#installation)  
+2. [Supported Hash Algorithms](#supported-hash-algorithms)
+3. [Installation](#installation) 
+4. [How It Works (Architecture & Internals)](#how-it-works-architecture--internals)   
 5. [Usage](#usage)  
 6. [Command-Line Options & GUI Controls](#command-line-options--gui-controls)  
 7. [Configuration](#configuration)  
@@ -64,6 +62,43 @@ A GUI Based Hash Cracker
 
 ---
 
+## Installation
+
+Supported Operating Systems
+```bash
+Windows 8/10/11
+```
+
+SpiderHash is designed specifically for Windows operating systems. Follow these steps to set it up:
+
+**Clone the repository**
+   ```bash
+   git clone https://github.com/yottajunaid/spiderhash.git
+   cd spiderhash
+```
+**Download and install Python 3.8 or later.**
+
+**Set up a virtual environment (recommended, but not necassary)**
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+**Install dependencies**
+
+Runtime dependencies:
+```bash
+pip install -r requirements.txt
+```
+Development dependencies:
+```bash
+pip install -r requirements_dev.txt
+```
+**Run SpiderHash**
+```bash
+python src\main.py
+```
+
 ## How It Works (Architecture & Internals)
 
 Here is a breakdown of how SpiderHash is structured under the hood, how it attempts to crack hashes, and how you might extend or modify it.
@@ -104,29 +139,6 @@ Here is a breakdown of how SpiderHash is structured under the hood, how it attem
 
 ---
 
-## Installation
-
-Supported Operating Systems
-```bash
-Windows 8/10/11
-```
-Here are step-by-step instructions to install SpiderHash on your machine.
-
-```bash
-# clone the repo
-git clone https://github.com/yottajunaid/spiderhash.git
-cd spiderhash
-
-# create a virtual environment (recommended)
-python3 -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-
-# install runtime dependencies
-pip install -r requirements.txt
-
-# (optional) install development dependencies
-pip install -r requirements_dev.txt
-```
 ## Usage
 
 ### Running the GUI
@@ -144,15 +156,6 @@ Or if your entrypoint differs, specify accordingly. The GUI should open, allowin
 - Provide a wordlist file (or select “brute-force / mask” mode if supported).
     
 - Run the cracking process; monitor status.
-    
-
-### Command Line / Scripted Use (if supported)
-
-If SpiderHash supports non-GUI usage (e.g. via script or command line arguments), describe here:
-
-`python src/spiderhash_cli.py --hash <target_hash> --alg SHA-256 --wordlist path/to/wordlist.txt`
-
-List available options: algorithm choices, verbosity, output file, aborting, threads.
 
 * * *
 
@@ -254,6 +257,8 @@ This project is licensed under **GPL-3.0**. (See LICENSE file)
 - Thanks to all open source libraries (Python's `hashlib`, GUI toolkit, etc.)
     
 - Thanks to testers who contributed the reports and benchmarks.
+
+- Thanks to the Open-Source Developers who build the Logic Code, Mathematics, workflow
     
 
 * * *
