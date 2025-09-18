@@ -12,13 +12,12 @@
 2. [Supported Hash Algorithms](#supported-hash-algorithms)
 3. [Installation](#installation) 
 4. [How It Works (Architecture & Internals)](#how-it-works-architecture--internals)   
-5. [Usage](#usage)  
-6. [Command-Line Options & GUI Controls](#command-line-options--gui-controls)  
-7. [Configuration](#configuration)  
-8. [Performance & Testing](#performance--testing)  
-9. [Limitations & Security Considerations](#limitations--security-considerations)  
-10. [Contributing](#contributing)  
-11. [License](#license)  
+5. [Usage](#usage)
+6. [Configuration](#configuration)  
+7. [Performance & Testing](#performance--testing)  
+8. [Limitations & Security Considerations](#limitations--security-considerations)  
+9. [Contributing](#contributing)  
+10. [License](#license)  
 
 ---
 
@@ -27,9 +26,7 @@
 - Graphical User Interface (GUI) to make hash cracking accessible without needing to write scripts.  
 - Cracks many different types of hash algorithms (≈22).  
 - Supports wordlist‐based cracking and possibly other modes (depending on algorithm).  
-- Modular code structure so algorithms are (or can be) separated out, maintained independently.  
-- Testing framework (there is a `TESTING_REPORT.xlsx`) showing which hashes work under what conditions.  
-- Requirements and development requirements separated (`requirements.txt` and `requirements_dev.txt`), enabling a clean dev environment.  
+- Testing framework (there is a `TESTING_REPORT.xlsx`) showing which hashes has been tested just for reference. 
 
 ---
 
@@ -109,16 +106,15 @@ Here is a breakdown of how SpiderHash is structured under the hood, how it attem
 - There are separate Python modules/files for:
   - GUI handling (windows, input, progress, result display)  
   - Hash algorithm handlers: each algorithm has code to verify / compute the hash given plaintext.  
-  - Cracking engines: wordlist‐based, possibly brute‐force or hybrid.  
+  - Cracking engines: wordlist‐based, probabilistic, possibly brute‐force or hybrid.  
   - Utility modules: reading wordlists, validating format, progress reporting, maybe threading.  
-  - Testing / reports: a `TESTING_REPORT.xlsx` that shows which hashes successful, likely time etc.  
 
 ### Crack Flow
 
 1. **Input from user**: user supplies the hash (maybe multiple), chooses which algorithm they believe it to be, supplies wordlist or rules.  
 2. **Pre-checks**: validate that hash format matches algorithm (length, hex/base64, etc.).  
 3. **Attempt wordlist mode**: iterate over dictionary entries, hash them, compare with target.  
-4. **Possibly brute force / mask mode**: if code supports it, generate candidate strings (based on allowed character sets, lengths), hash, compare.  
+4. **Possibly brute force**: if code supports it, generate candidate strings (based on allowed character sets, lengths), hash, compare.  
 5. **Result reporting**: show when a match is found; provide partial progress if running long; allow abort.  
 
 ### GUI
@@ -153,7 +149,7 @@ Or if your entrypoint differs, specify accordingly. The GUI should open, allowin
     
 - Select the supposed algorithm.
     
-- Provide a wordlist file (or select “brute-force / mask” mode if supported).
+- Provide a wordlist file (or select “brute-force / other” mode if needed).
     
 - Run the cracking process; monitor status.
 
@@ -165,26 +161,26 @@ Or if your entrypoint differs, specify accordingly. The GUI should open, allowin
     
 - Algorithm settings: maybe salt, iteration count (for KDFs), or format parsing.
     
-- Character set / length bounds if brute force / mask mode.
+- Character set / length bounds if brute force.
     
-- GUI settings: theme, logging.
+- GUI settings: logging.
     
 
 * * *
 
 ## Performance & Testing
 
-- SpiderHash includes a **testing report** (`TESTING_REPORT.xlsx`) which documents for various algorithms which hashes (from test set) get cracked with which wordlists, how long, which settings.
+- SpiderHash includes a **testing report** (`TESTING_REPORT.xlsx`) which documents for various algorithms which hashes (from test set) get cracked with which wordlists, and which settings.
     
-- For heavier hashes (SHA-512, salted KDFs), cracking may take large time depending on wordlist size or brute force space. SpiderHash performance depends heavily on:
+- For heavier hashes (SHA-512, etc), cracking may take large time depending on wordlist size or brute force space. SpiderHash performance depends heavily on:
     
-    1.  Hardware (CPU speed, number of cores)
+    **1.  Hardware (CPU speed, number of cores)**
         
-    2.  Efficiency of hash implementation in Python / external libs
+    **2.  Efficiency of hash implementation in Python / external libs**
         
-    3.  Size of wordlists / complexity of brute force
+    **3.  Size of wordlists / complexity of brute force**
         
-- Suggestions: use optimized hash libraries where possible, use smaller subsets or better wordlists, multi‐threading if implemented.
+- Suggestions: use smaller subsets or better probable wordlists, multi‐threading if implemented.
     
 
 * * *
@@ -199,30 +195,7 @@ Important to be clear (this is where things get philosophical + practical):
     
 - Legal / ethical constraints: only crack hashes you are authorized to.
     
-- Some algorithms (especially with salts or key derivation functions) may not be supported in SpiderHash; or may need additional user input (salt, iteration count).
-    
 - Performance may be very low for bruteforce of large keyspaces (e.g. long passwords, mixed chars).
-    
-
-* * *
-
-## Extending SpiderHash
-
-If you want to add support for a new hash algorithm:
-
-1.  Write a hash module that:
-    
-    - Takes plaintext input (and salt / parameters if needed).
-        
-    - Produces hash in same format your GUI / comparison logic expects.
-        
-    - Validate format (hex, base64) as needed.
-        
-2.  Add entries in the GUI/front-end so user can pick the new algorithm.
-    
-3.  Update mapping from algorithm name → handler.
-    
-4.  Add tests: ideally extend `TESTING_REPORT.xlsx` or similar test suite with examples.
     
 
 * * *
@@ -240,9 +213,6 @@ If you’d like to contribute:
 - Ensure backwards compatibility with existing algorithms.
     
 - Submit pull requests.
-    
-
-Please adhere to coding style (PEP8 or whatever style you're following), write clear docstrings, etc.
 
 * * *
 
@@ -258,7 +228,7 @@ This project is licensed under **GPL-3.0**. (See LICENSE file)
     
 - Thanks to testers who contributed the reports and benchmarks.
 
-- Thanks to the Open-Source Developers who build the Logic Code, Mathematics, workflow
+- Thanks to the Open-Source Developers who build the Logic Code, Mathematics, workflow, etc
     
 
 * * *
@@ -286,4 +256,4 @@ Here’s a typical example session:
 
 - Report bugs or request features via GitHub Issues.
     
-- For questions / help, can email / reach out to **junaid** (or via GitHub profile).
+- For questions / help, can email / reach out to **yottajunaid** [(or via portfolio)](https://yottajunaid.github.io/portfolio/).
