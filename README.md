@@ -74,6 +74,9 @@ SpiderHash is designed specifically for Windows operating systems. Follow these 
    cd spiderhash
 ```
 **Download and install Python 3.8 or later.**
+You can easily install via Microsoft Store
+<img width="1123" height="625" alt="Screenshot 2025-09-18 210724" src="https://github.com/user-attachments/assets/d6aba567-eae0-4671-b320-0bd126439e74" />
+
 
 **Set up a virtual environment (recommended, but not necassary)**
 
