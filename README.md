@@ -1,5 +1,3 @@
-# THE REPOSITORY IS UNDER MAINTAINANCE!!! DON'T USE IT NOW!!!
-
 # SpiderHash
 
 **SpiderHash** is a GUI-based Hash Cracker utility written in Python. It supports cracking over **22 hashing algorithms**, offering both the convenience of a graphical user interface and the power of configurable wordlists / bruteforce behavior.  
