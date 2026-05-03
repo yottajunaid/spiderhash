@@ -1,8 +1,12 @@
-# SpiderHash 
-
-**SpiderHash** is a GUI-based Hash Cracker utility written in Python. It supports cracking over **22 hashing algorithms**, offering both the convenience of a graphical user interface and the power of configurable wordlists / bruteforce behavior.  
-
 <div align="center">
+  <img src="src/assets/logo.png" alt="SpiderHash Logo" width="220">
+
+  # SpiderHash
+
+  ## **SpiderHash** is a GUI-based Hash Cracker utility written in Python. It supports cracking over **22 hashing algorithms**, offering both the convenience of a graphical user interface and the power of configurable wordlists / bruteforce behavior. 
+  
+  <br>
+
   <a href="https://github.com/user-attachments/files/27314192/spiderhash_report.pdf">
     <img src="https://img.shields.io/badge/Project_Report-blue?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xNCAySDZjLTEuMSAwLTEuOTkuOS0xLjk5IDJMNCAyMGMwIDEuMS44OSAyIDEuOTkgMkgxOGMxLjEgMCAyLS45IDItMlY4bC02LTZ6bTIgMTZIOHYtMmg4djJ6bTAtNEg4di0yaDh2MnptLTMtNVYzLjVMMTguNSA5SDEzeiIvPjwvc3ZnPg==" alt="Project Report" />
   </a>
