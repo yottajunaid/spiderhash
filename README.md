@@ -57,7 +57,39 @@
 
 ---
 
-## Installation
+# Installation
+
+## Windows
+
+Download the `.exe` for windows:
+https://github.com/yottajunaid/spiderhash/releases/tag/v.1.0
+
+### Cross-Platform Compatibility (Wine)
+
+While this executable is built natively for **Windows 8/10/11**, you can run it on **Linux** and **macOS** using **Wine**, a compatibility layer capable of running Windows applications.
+
+To install Wine on your system, use the following commands:
+
+#### For Linux (Ubuntu/Debian-based):
+
+Bash
+
+```
+sudo apt update
+sudo apt install wine
+```
+
+#### For macOS (via Homebrew):
+
+Bash
+
+```
+brew install --cask wine-stable
+```
+
+**To run the application**: Navigate to the download folder in your terminal and execute: `wine SpiderHash.exe`
+
+## Install from Source code
 
 Supported Operating Systems
 ```bash
