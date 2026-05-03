@@ -1,6 +1,18 @@
-# SpiderHash
+# SpiderHash 
 
 **SpiderHash** is a GUI-based Hash Cracker utility written in Python. It supports cracking over **22 hashing algorithms**, offering both the convenience of a graphical user interface and the power of configurable wordlists / bruteforce behavior.  
+
+<div align="center">
+  <a href="https://github.com/user-attachments/files/27314192/spiderhash_report.pdf">
+    <img src="https://img.shields.io/badge/Project_Report-blue?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xNCAySDZjLTEuMSAwLTEuOTkuOS0xLjk5IDJMNCAyMGMwIDEuMS44OSAyIDEuOTkgMkgxOGMxLjEgMCAyLS45IDItMlY4bC02LTZ6bTIgMTZIOHYtMmg4djJ6bTAtNEg4di0yaDh2MnptLTMtNVYzLjVMMTguNSA5SDEzeiIvPjwvc3ZnPg==" alt="Project Report" />
+  </a>
+  <a href="https://www.rjwave.org/ijedr/viewpaperforall.php?paper=IJEDR2602755">
+    <img src="https://img.shields.io/badge/Research_Paper-green?style=for-the-badge&logo=googledocs&logoColor=white" alt="Research Paper" />
+  </a>
+  <a href="https://github.com/yottajunaid/spiderhash/releases/download/v.1.0/spiderhash.exe">
+    <img src="https://img.shields.io/badge/Download_EXE-0078D6?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTAgOTMuN2wxODMuNi0yNS4zdjE3Ny40SDBWOTMuN3ptMCAzMjQuNmwxODMuNiAyNS4zVjI2OC40SDB2MTQ5Ljl6bTIwMy44IDI4TDQ0OCA0ODBWMjY4LjRIMjAzLjh2MTc3Ljl6bTAtMzgwLjZ2MTgwLjFINDQ4VjMyTDIwMy44IDY1Ljd6Ii8+PC9zdmc+" alt="Windows EXE" />
+  </a>
+</div>
 
 ---
 
@@ -14,8 +26,10 @@
 6. [Configuration](#configuration)  
 7. [Performance & Testing](#performance--testing)  
 8. [Limitations & Security Considerations](#limitations--security-considerations)  
-9. [Contributing](#contributing)  
-10. [License](#license)  
+9. [Contributing](#contributing)
+10. [Project Report](#project-report)
+11. [Research Paper](#research-paper)
+12. [License](#license)  
 
 ---
 
@@ -248,6 +262,14 @@ If you’d like to contribute:
 - Submit pull requests.
 
 * * *
+
+## Project Report
+Download: [spiderhash_report.pdf](https://github.com/user-attachments/files/27314192/spiderhash_report.pdf)
+
+* * *
+## Research Paper
+
+Download: [Paper](https://www.rjwave.org/ijedr/viewpaperforall.php?paper=IJEDR2602755)
 
 ## License
 
