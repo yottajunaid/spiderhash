@@ -147,6 +147,10 @@ pip install -r requirements_dev.txt
 python src\main.py
 ```
 
+### Screenshot
+<img width="1350" height="800" alt="screenshot" src="https://github.com/user-attachments/assets/34a579f4-af79-4c22-9172-69e289eba136" />
+
+
 ## How It Works (Architecture & Internals)
 
 Here is a breakdown of how SpiderHash is structured under the hood, how it attempts to crack hashes, and how you might extend or modify it.
