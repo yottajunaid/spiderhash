@@ -182,7 +182,7 @@ Here is a breakdown of how SpiderHash is structured under the hood, how it attem
   - `tkinter` or another GUI toolkit  
   - standard crypto/hash libraries (from Python’s `hashlib`)  
   - maybe third-party libs for some weaker or unusual hash types, or to speed up some computations.  
-- For development, `requirements_dev.txt` probably includes testing tools (pytest, code linters, etc.).  
+- For development, `requirements_dev.txt` probably includes testing tools (pytest, code linters, etc.)
 
 ---
 
