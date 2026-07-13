@@ -42,7 +42,7 @@
 - Graphical User Interface (GUI) to make hash cracking accessible without needing to write scripts.  
 - Cracks many different types of hash algorithms (≈22).  
 - Supports wordlist‐based cracking and possibly other modes (depending on algorithm).  
-- Testing framework (there is a `TESTING_REPORT.xlsx`) showing which hashes has been tested just for reference. 
+- Testing framework (there is a `TESTING_REPORT.xlsx`) showing which hashes has been tested just for reference 
 
 ---
 
